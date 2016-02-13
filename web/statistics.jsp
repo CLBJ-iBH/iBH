@@ -10,6 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        
         <title>iBH - Statistics</title>
 
         <!-- CSS  -->
@@ -52,8 +53,56 @@
           <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
       </nav>  
+        <div class ="collapsible-body description">
+            <canvas id="ATKChart" width="400" height="400"></canvas>
+        </div>
     </body>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script>
+        var options = {responsive:true};
+        var data = [
+            {
+                value: 300,
+                color:"#F7464A",
+                highlight: "#FF5A5E",
+                label: "Red"
+            },
+            {
+                value: 50,
+                color: "#46BFBD",
+                highlight: "#5AD3D1",
+                label: "Green"
+            },
+            {
+                value: 100,
+                color: "#FDB45C",
+                highlight: "#FFC870",
+                label: "Yellow"
+            }
+        ]
+        // Get context with jQuery - using jQuery's .get() method.
+        var ctx = document.getElementById("ATKChart").getContext("2d");
+        // This will get the first returned node in the jQuery collection.
+        var LineChartDemo = new Chart(ctx).Line(data, {
+            bezierCurve: true,
+            scaleShowVerticalLines: false,
+            scaleGridLineColor: "black",
+            responsive: true,
+            animationSteps: 50,
+            tooltipYPadding: 16,
+            tooltipCornerRadius: 0,
+            tooltipTitleFontStyle: "normal",
+            tooltipFillColor: "rgba(0,160,0,0.8)",
+            animationEasing: "easeOutBounce",
+            scaleLineColor: "black",
+            scaleFontSize: 16
+        });
+
+
+
+    </script>
 </html>
