@@ -46,7 +46,11 @@
           <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
       </nav>
-        
+        <div class ="container">
+            <div class="row">
+                <h2>New Usage Event</h2>
+            </div>
+        </div>
     </body>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
