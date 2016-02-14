@@ -52,10 +52,14 @@
           </ul>
           <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
-      </nav>  
-        <div class ="collapsible-body description">
-            <canvas id="ATKChart" width="400" height="400"></canvas>
-        </div>
+      </nav>
+        <ul class ="collapsible" data-collapsible="expandable" style = "width: 50%; margin: auto; margin-top: 5%;">
+            <li>
+                <div class ="collapsible-header">Usage per period</div>
+                <div style="width:90%; height:90%; margin: auto;"><canvas id="ATKChart"></canvas></div>
+            </li>
+        </ul>
+        
     </body>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
@@ -64,35 +68,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
     <script>
         var options = {responsive:true};
-        var data = [
-            {
-                value: 300,
-                color:"#F7464A",
-                highlight: "#FF5A5E",
-                label: "Red"
-            },
-            {
-                value: 50,
-                color: "#46BFBD",
-                highlight: "#5AD3D1",
-                label: "Green"
-            },
-            {
-                value: 100,
-                color: "#FDB45C",
-                highlight: "#FFC870",
-                label: "Yellow"
-            }
-        ]
+        var data = {
+            labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            datasets: [
+                {
+                    label: "My First dataset",
+                    fillColor: "rgba(220,220,220,0.2)",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: [65, 59, 80, 81, 56, 55, 40]
+                }
+            ]
+        };
         // Get context with jQuery - using jQuery's .get() method.
         var ctx = document.getElementById("ATKChart").getContext("2d");
         // This will get the first returned node in the jQuery collection.
         var LineChartDemo = new Chart(ctx).Line(data, {
-            bezierCurve: true,
+            bezierCurve: false,
             scaleShowVerticalLines: false,
             scaleGridLineColor: "black",
-            responsive: true,
             animationSteps: 50,
+            responsive: true,
             tooltipYPadding: 16,
             tooltipCornerRadius: 0,
             tooltipTitleFontStyle: "normal",
