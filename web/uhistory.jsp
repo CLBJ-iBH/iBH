@@ -1,6 +1,6 @@
 <%-- 
-    Document   : usage
-    Created on : Feb 1, 2016, 8:05:31 PM
+    Document   : about
+    Created on : Feb 1, 2016, 7:53:09 PM
     Author     : user
 --%>
 
@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-        <title>iBH - Usage History</title>
+        <title>iBH - About</title>
 
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -21,11 +21,11 @@
         <!-- Dropdown Structure -->
         <ul id="dropdown1" class="dropdown-content white-text">
       <li><a href="usage.jsp">Usages</a></li>
-      <li><a href="uhistory.jsp">History</a></li>
+      <li><a href="usage.jsp">History</a></li>
     </ul>
     <ul id="dropdown2" class="dropdown-content white-text">
       <li><a href="booking.jsp">Start Your Booking</a></li>
-      <li><a href="bhistory.jsp">History</a></li>
+      <li><a href="booking.jsp">History</a></li>
     </ul>
   <nav class="amber darken-1" role="navigation">
     <div class="nav-wrapper container">
@@ -39,14 +39,32 @@
 
           <ul id="nav-mobile" class="side-nav">
             <li><a href="booking.jsp"><i class="material-icons left">dialpad</i>Booking Transactions</a>
-            <li class="active"><a href="#!"><i class="material-icons left">trending_up</i>Usage History</a>
+            <li><a href="usage.jsp"><i class="material-icons left">trending_up</i>Usage History</a>
             <li><a href="statistics.jsp"><i class="material-icons left">equalizer</i>Statistics</a></li>
-            <li><a href="about.jsp"><i class="material-icons left">supervisor_account</i>About</a></li>
+            <li><a href="#!"><i class="material-icons left">supervisor_account</i>About</a></li>
           </ul>
           <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
       </nav>
-        
+      <div class ="container">
+            <div class="row">
+                <h2>Usages History</h2>
+            </div>
+        </div>
+        <div class = "container">
+          <table class = "highlight centered">
+              <thead>
+              <tr>
+                  <th>No</th>
+                  <th>User</th>
+                  <th>Items</th>
+                  <th>Qty</th>
+                  <th>Usage Date</th>
+                  <th>Due Date</th>
+              </tr>
+              </thead>
+          </table>
+      </div>
     </body>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>

@@ -21,28 +21,22 @@
     <body>        
         <!-- Dropdown Structure -->
         <ul id="dropdown1" class="dropdown-content white-text">
-          <li><a href="usage.jsp">January</a></li>
-          <li><a href="usage.jsp">February</a></li>
-          <li><a href="usage.jsp">March</a></li>
-          <li><a href="usage.jsp">April</a></li>
-          <li><a href="usage.jsp">May</a></li>
-          <li><a href="usage.jsp">June</a></li>
-          <li><a href="usage.jsp">July</a></li>
-          <li><a href="usage.jsp">August</a></li>
-          <li><a href="usage.jsp">September</a></li>
-          <li><a href="usage.jsp">October</a></li>
-          <li><a href="usage.jsp">November</a></li>
-          <li><a href="usage.jsp">December</a></li>
-        </ul>
+      <li><a href="usage.jsp">Usages</a></li>
+      <li><a href="uhistory.jsp">History</a></li>
+    </ul>
+    <ul id="dropdown2" class="dropdown-content white-text">
+      <li><a href="booking.jsp">Start Your Booking</a></li>
+      <li><a href="bhistory.jsp">History</a></li>
+    </ul>
         <nav class="amber darken-1" role="navigation">
-            <div class="nav-wrapper container">
-              <a id="logo-container" href="index.jsp" class="brand-logo white-text">iBH</a>
-              <ul class="right hide-on-med-and-down">
-                <li class="active"><a href="#!" class="white-text"><i class="material-icons left">dialpad</i>Booking Transactions</a>
-                <li><a href="usage.jsp" class="dropdown-button white-text" data-activates="dropdown1"><i class="material-icons left">trending_up</i><i class="material-icons right">arrow_drop_down</i>Usage History</a></li>
-                <li><a href="statistics.jsp" class="white-text"><i class="material-icons left">equalizer</i>Statistics</a></li>
-                <li><a href="about.jsp" class="white-text"><i class="material-icons left">supervisor_account</i>About</a></li>
-              </ul>
+          <div class="nav-wrapper container">
+            <a id="logo-container" href="index.jsp" class="brand-logo white-text">iBH</a>
+            <ul class="right hide-on-med-and-down">
+              <li><a class="dropdown-button white-text" data-activates="dropdown2"><i class="material-icons left">dialpad</i><i class="material-icons right">arrow_drop_down</i>Booking Transactions</a></li>
+              <li><a class="dropdown-button white-text" data-activates="dropdown1"><i class="material-icons left">trending_up</i><i class="material-icons right">arrow_drop_down</i>Usages Transactions</a></li>
+              <li><a href="statistics.jsp" class="white-text"><i class="material-icons left">equalizer</i>Statistics</a></li>
+              <li><a href="about.jsp" class="white-text"><i class="material-icons left">supervisor_account</i>About</a></li>
+            </ul>
 
               <ul id="nav-mobile" class="side-nav">
                 <li><a href="#!"><i class="material-icons left">dialpad</i>Booking Transactions</a>
