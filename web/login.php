@@ -10,8 +10,6 @@
     </head>
     <body>
         
-
-
     <ul class="cb-slideshow">
         <li><span>Image 01</span></li>
         <li><span>Image 02</span></li>
@@ -31,9 +29,9 @@
                     <div class="login">
                         <form method="POST" action="ceklogin.php">
                             <input type="password" placeholder="password" name="password"><br>
-                            <input type="submit" name="Post" value="Post"><br>
-                            <p><a href="">forgot password?</a></p>
+                            <input type="submit" value="Enter"><br>
                         </form>
+                        <p><a href="">forgot password?</a></p>
                     </div>
 
     </body>

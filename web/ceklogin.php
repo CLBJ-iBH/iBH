@@ -1,9 +1,14 @@
+<html><head></head><body>
 <?php
-	if ($_POST["password"]=="abc") {
-		 header("Location: index.jsp");
-		 die();
-	} else {
-		header("Location: login.php?wrongpassword");
-		die();
-	}
+    echo $_POST["password"];
+    if (strcmp($_POST["password"],"abc") == 0) {
+        echo 'asdf'; 
+        header("Location: index.jsp");
+        die();
+    } else {
+        header("Location: login.php?wrongpassword");
+        die();
+    }
 ?>
+</body>
+<html>
